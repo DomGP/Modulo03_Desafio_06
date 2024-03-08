@@ -28,6 +28,7 @@ hr{
     max-width: 300px;
     margin: 0 auto;
     margin-top: 2em;
+    margin-bottom: 2em;
 }
 main{
     display: flex;
@@ -72,4 +73,9 @@ button:active{
 #resultado{
     margin-top: 0.5em;
     margin-bottom: 1em;
+}
+#myChart{
+    max-width: 700px;
+    max-height: 200px;
+    margin: 0 auto;
 }

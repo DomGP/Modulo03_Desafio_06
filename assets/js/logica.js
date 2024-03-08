@@ -4,6 +4,7 @@ const selectMoneda = document.getElementById('moneda') //Variable de select mone
 const btnConvertir = document.getElementById('btn'); //Boton de conversión
 const resultado = document.getElementById('resultado'); //Variable que muestra la conversión
 const myChart = document.getElementById('myChart'); //Variable que muestra la gráfica
+let chart
 
 //FUNCIÓN PARA LLAMAR A LA API DE CONVERSIÓN
 async function getMoneda(){
@@ -18,7 +19,7 @@ async function getMoneda(){
         }else{
             const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
             const operacion = (montoCLP / dataMonedas[monedaTipo].valor).toFixed(2);
-            resultado.innerHTML = `Resultado: $${operacion}`
+            resultado.innerHTML = `Resultado: $${operacion} ${monedaTipo}`
             mensaje.innerHTML=''
             grafico(monedaTipo, dataMonedas[monedaTipo].nombre)
         }
@@ -47,7 +48,10 @@ const grafico = async(variable, nombreMoneda)=>{
     const xValues = fechas.reverse();
     const yValues = valores.reverse();
 
-    new Chart('myChart',{
+    if(chart){
+        chart.destroy();
+    }
+    chart = new Chart('myChart',{
         type:'line',
         data:{
             labels:xValues,
