@@ -20,7 +20,7 @@ async function getMoneda(){
             const operacion = (montoCLP / dataMonedas[monedaTipo].valor).toFixed(2);
             resultado.innerHTML = `Resultado: $${operacion}`
             mensaje.innerHTML=''
-            grafico(monedaTipo)
+            grafico(monedaTipo, dataMonedas[monedaTipo].nombre)
         }
     } catch(error){
         console.error('Error al obtener la tasa de cambio', error);
@@ -33,7 +33,7 @@ btnConvertir.addEventListener('click', function(){
 })
 
 //FUNCIÓN GRAFICA
-const grafico = async(variable)=>{
+const grafico = async(variable, nombreMoneda)=>{
     const res = await fetch(`https://mindicador.cl/api/${variable}`);
     const data = await res.json();
     let series = data.serie.slice(0,9)
@@ -52,6 +52,7 @@ const grafico = async(variable)=>{
         data:{
             labels:xValues,
             datasets:[{
+                label:nombreMoneda,
                 fill:false,
                 lineTension:0,
                 backgroundColor: 'rgba(0,0,255,1.0)',
