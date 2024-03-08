@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://kit.fontawesome.com/f363d99965.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="./assets/imgs/coins-solid.svg">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <hr>
+            <h1>Conversor de Monedas Nacionales</h1>
+            <hr>
+        </nav>
+        <div class="prueba">
+            <main>
+                <h2> Pesos CLP</h2>
+                <input id="inputCLP" type="number" placeholder="Ingrese el monto en CLP">
+                <p id="mensaje"></p>
+                <br>
+                <h4>Moneda a convertir:</h4>
+                <select name="" id="moneda">
+                    <option value="dolar" id="dolar">Dólar</option>
+                    <option value="euro" id="euro">Euro</option>
+                    <option value="uf" id="uf">UF</option>
+                </select>
+                <button id="btn">Buscar</button>
+                <p id="resultado"></p>
+            </main>
+        </div>
+        <section>
+            <canvas id="myChart"></canvas>
+        </section>
+    </div>
+    
+
+
+    <!-- JS -->
+    <script src="./assets/js/logica.js"></script>
+</body>
+</html>
