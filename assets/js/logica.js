@@ -39,6 +39,10 @@ async function getMoneda(){
         }
     } catch(error){
         console.error('Error al obtener la tasa de cambio', error);
+        const mensajeError = document.getElementById('errorCatch')
+        if (mensajeError) {
+            mensajeError.innerHTML = 'Error al obtener la tasa de cambio: ' + error.message;
+        }
     }
 }
 
