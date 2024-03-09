@@ -1,5 +1,6 @@
 const inputCLP = document.getElementById('inputCLP'); //Variable de input CLP
 const mensaje = document.getElementById('mensaje'); //Variable de input vacío
+const mensaje2 = document.getElementById('mensaje2')//Variable de select vacío
 const selectMoneda = document.getElementById('moneda') //Variable de select moneda
 const btnConvertir = document.getElementById('btn'); //Boton de conversión
 const resultado = document.getElementById('resultado'); //Variable que muestra la conversión
@@ -13,14 +14,20 @@ async function getMoneda(){
         const res = await fetch(endpoint);
         const dataMonedas = await res.json();
         const montoCLP = Number(inputCLP.value)
+        const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
         if(montoCLP == '' && montoCLP <= 0){
             let alerta = `<span class='alertaMensaje'>Deebes agregar un valor valido</span>`
             mensaje.innerHTML=alerta
-        }else{
-            const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
+        }else if (monedaTipo == '' && monedaTipo >= 0){
+            let alerta2 = `<span class='alertaMensaje'>Debes seleccionar una moneda</span>`
+            mensaje2.innerHTML=alerta2
+            mensaje.innerHTML=''
+        }
+        else{
             const operacion = (montoCLP / dataMonedas[monedaTipo].valor).toFixed(2);
             resultado.innerHTML = `Resultado: $${operacion} ${monedaTipo.toUpperCase()}`
             mensaje.innerHTML=''
+            mensaje2.innerHTML=''
             grafico(monedaTipo, dataMonedas[monedaTipo].nombre)
         }
     } catch(error){
