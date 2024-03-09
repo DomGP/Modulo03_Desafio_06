@@ -15,12 +15,17 @@ async function getMoneda(){
         const dataMonedas = await res.json();
         const montoCLP = Number(inputCLP.value)
         const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
-        if(montoCLP == '' && montoCLP <= 0 && monedaTipo == ''){
-            let alerta = `<span class='alertaMensaje'>Deebes agregar un valor valido</span>`
+        if(montoCLP == '' && monedaTipo == ''){
+            let alerta = `<span class='alertaMensaje'>Debes agregar un valor valido</span>`
             let alerta2 = `<span class='alertaMensaje'>Debes seleccionar una moneda</span>`
             mensaje2.innerHTML=alerta2
             mensaje.innerHTML=alerta
-        } else if(monedaTipo !== '' && montoCLP == ''){
+        } else if(montoCLP <= 0){
+            let alerta = `<span class='alertaMensaje'>Debes agregar un valor valido</span>`
+            mensaje.innerHTML=alerta
+            mensaje2.innerHTML=''
+        } 
+        else if(monedaTipo !== '' && montoCLP == ''){
             let alerta = `<span class='alertaMensaje'>Deebes agregar un valor valido</span>`
             mensaje2.innerHTML=''
             mensaje.innerHTML=alerta
