@@ -55,6 +55,7 @@ main input{
     border-radius: 10px;
     border: none;
     font-size: 1em;
+    text-align: center;
 }
 .alertaMensaje{
     color: red;
