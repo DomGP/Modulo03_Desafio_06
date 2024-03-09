@@ -19,7 +19,7 @@ async function getMoneda(){
         }else{
             const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
             const operacion = (montoCLP / dataMonedas[monedaTipo].valor).toFixed(2);
-            resultado.innerHTML = `Resultado: $${operacion} ${monedaTipo}`
+            resultado.innerHTML = `Resultado: $${operacion} ${monedaTipo.toUpperCase()}`
             mensaje.innerHTML=''
             grafico(monedaTipo, dataMonedas[monedaTipo].nombre)
         }
@@ -59,8 +59,8 @@ const grafico = async(variable, nombreMoneda)=>{
                 label:nombreMoneda,
                 fill:false,
                 lineTension:0,
-                backgroundColor: 'rgba(0,0,255,1.0)',
-                borderColor: 'rgba(0,0,255,0.1)',
+                backgroundColor: 'rgb(49,210,242)',
+                borderColor: 'rgba(108,117,125)',
                 data:yValues,
             }]
         }

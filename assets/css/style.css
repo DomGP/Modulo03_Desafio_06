@@ -3,32 +3,40 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face{
+    font-family:'miFuente';
+    src:url('../fonts/Source_Sans_3/static/SourceSans3-Regular.ttf')
+}
 body{
-    font-family: sans-serif;
-    /* background-color: black;
-    color: white; */
+    font-family: miFuente;
+    background-color: rgb(32,36,40);
+    color: white;
 }
 nav{
     text-align: center;
     padding: 1em;
 }
 h1{
-    padding: 0.5em;
+    padding: 1em;
+    font-size: 2em;
 }
 hr{
     width: 70%;
     margin: 0 auto;
+    border:1px solid rgba(30,57,65);
 }
 .prueba{
-    background-color:rgba(3,37,76,0.4);
-    border: 3px ridge rgba(3,37,76,0.5);
+    background-color:rgba(108,117,125,0.4);
+    border: 3px ridge rgba(30,57,65,0.5);
     box-shadow: rgba(3, 37, 76, 0.25) 0px 14px 28px, rgba(3, 37, 76, 0.22) 0px 10px 10px;
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
     margin-top: 2em;
     margin-bottom: 2em;
+    border-radius: 10px;
+    font-size: 1em;
 }
 main{
     display: flex;
@@ -39,24 +47,29 @@ main{
 main h2{
     margin-bottom: 0.5em;
     margin-top: 0.5em;
+    font-size: 1.6em;
 }
 main input{
     margin-bottom: 1em;
     padding:0.5em 1em;
     border-radius: 10px;
     border: none;
+    font-size: 1em;
 }
 .alertaMensaje{
     color: red;
 }
 main h4{
     margin-bottom: 0.5em;
+    font-size: 1.5em;
 }
 main select{
     margin-bottom: 1em;
     padding: 0.4em 5em;
     border: none;
     border-radius: 10px;
+    font-family: miFuente;
+    font-size: 1em;
 }
 button{
     padding: 0.5em 5.5em;
@@ -64,18 +77,22 @@ button{
     border-radius: 10px;
     color: white;
     font-weight: 700;
-    background-color: rgb(2, 199, 199);
+    background-color: rgb(49,210,242);
     cursor: pointer;
+    font-family: miFuente;
+    font-size: 1em;
 }
 button:active{
     background-color: cyan;
 }
 #resultado{
-    margin-top: 0.5em;
+    margin-top: 0.7em;
     margin-bottom: 1em;
+    font-family: miFuente;
+    font-size: 1.5em;
 }
 #myChart{
-    max-width: 700px;
-    max-height: 200px;
+    max-width: 500px;
+    max-height: 300px;
     margin: 0 auto;
 }
