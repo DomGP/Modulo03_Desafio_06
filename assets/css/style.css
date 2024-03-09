@@ -14,10 +14,10 @@ body{
 }
 nav{
     text-align: center;
-    padding: 1em;
+    padding: 0.5em;
 }
 h1{
-    padding: 1em;
+    padding: 0.5em;
     font-size: 2em;
 }
 hr{
@@ -96,4 +96,5 @@ button:active{
     max-width: 800px;
     max-height: 300px;
     margin: 0 auto;
+    padding-bottom: 2em;
 }
