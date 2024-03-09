@@ -92,6 +92,7 @@ button:active{
     font-size: 1.5em;
 }
 #myChart{
+    width: 500px;
     max-width: 500px;
     max-height: 300px;
     margin: 0 auto;
