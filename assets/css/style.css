@@ -51,7 +51,7 @@ main h2{
 }
 main input{
     margin-bottom: 1em;
-    padding:0.5em 1.6em;
+    padding:0.5em 0.8em;
     border-radius: 10px;
     border: none;
     font-size: 1em;
@@ -66,14 +66,14 @@ main h4{
 }
 main select{
     margin-bottom: 1em;
-    padding: 0.4em 5em;
+    padding: 0.4em 4em;
     border: none;
     border-radius: 10px;
     font-family: miFuente;
     font-size: 1em;
 }
 button{
-    padding: 0.5em 6.4em;
+    padding: 0.5em 5.5em;
     border: none;
     border-radius: 10px;
     color: white;
