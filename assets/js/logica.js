@@ -37,7 +37,8 @@ async function getMoneda(){
             mensaje2.innerHTML=''
             grafico(monedaTipo, dataMonedas[monedaTipo].nombre)
 
-            inputCLP.value=''
+            inputCLP.value='';
+            selectMoneda.selectedIndex = 0
         }
     } catch(error){
         console.error('Error al obtener la tasa de cambio', error);
