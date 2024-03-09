@@ -14,7 +14,7 @@ async function getMoneda(){
         const res = await fetch(endpoint);
         const dataMonedas = await res.json();
         const montoCLP = Number(inputCLP.value)
-        const monedaTipo = selectMoneda.options[selectMoneda.selectedIndex].value;
+        const monedaTipo = selectMoneda.value;
         if(montoCLP == '' && monedaTipo == ''){
             let alerta = `<span class='alertaMensaje'>Debes agregar un valor valido</span>`
             let alerta2 = `<span class='alertaMensaje'>Debes seleccionar una moneda</span>`
