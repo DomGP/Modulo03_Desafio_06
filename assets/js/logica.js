@@ -18,7 +18,7 @@ async function getMoneda(){
         if(montoCLP == '' && montoCLP <= 0){
             let alerta = `<span class='alertaMensaje'>Deebes agregar un valor valido</span>`
             mensaje.innerHTML=alerta
-        }else if (monedaTipo == '' && monedaTipo >= 0){
+        }else if (monedaTipo == '' && montoCLP >= 0){
             let alerta2 = `<span class='alertaMensaje'>Debes seleccionar una moneda</span>`
             mensaje2.innerHTML=alerta2
             mensaje.innerHTML=''
